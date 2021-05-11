@@ -23,7 +23,7 @@ jobs:
         with:
           registry: ghcr.io
           username: carwow
-          password: ${{ secrets.PERSONAL_TOKEN }}
+          password: ${{ github.token }}
 
       - name: Bust build cache
         run: sed -ie "s/:buildcache:/$RANDOM/" Dockerfile

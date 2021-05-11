@@ -58,7 +58,7 @@ jobs:
     steps:
       - uses: carwow/dependabot-lein-runner@main
         with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ github.token }}
           repository: ${{ matrix.projects.repository }}
           directory: ${{ matrix.projects.directory }}
 ```
