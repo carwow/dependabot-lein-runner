@@ -10,11 +10,11 @@ jobs:
       fail-fast: false
       matrix:
         projects:
-          - repository: CGA1123/dependabot-lein-runner
+          - repository: carwow/dependabot-lein-runner
             directory: '/dummy'
 
     steps:
-      - uses: CGA1123/dependabot-lein-runner@main
+      - uses: carwow/dependabot-lein-runner@main
         with:
           token: ${{ github.token }}
           repository: ${{ matrix.projects.repository }}

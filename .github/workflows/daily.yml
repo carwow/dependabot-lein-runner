@@ -8,7 +8,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: CGA1123/dependabot-lein-runner@main
+      - uses: carwow/dependabot-lein-runner@main
         with:
           token: ${{ github.token }}
           directory: '/dummy'

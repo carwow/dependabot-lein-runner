@@ -25,7 +25,7 @@ branding:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/cga1123/dependabot-lein-runner:latest'
+  image: 'docker://ghcr.io/carwow/dependabot-lein-runner:latest'
   args:
     - ${{ inputs.token }}
     - ${{ inputs.registries }}

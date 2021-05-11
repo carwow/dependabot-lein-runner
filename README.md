@@ -6,7 +6,7 @@ This action runs dependabot for Clojure (lein) projects using a [fork] of
 The action executes the `update.rb` script using a trimmed down version of the
 `Dockerfile` from `dependabot-core` which contains only what is required to run
 updates on `lein` projects. The image is pushed to
-[`ghcr.io/cga1123/dependabot-lein-runner`].
+[`ghcr.io/carwow/dependabot-lein-runner`].
 
 It uses the following variables:
 - `token` the github access token to use to both check the private repositories and create pull requests (may be the GitHub Actions token or a personal access token)
@@ -27,7 +27,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: CGA1123/dependabot-lein-runner@main
+      - uses: carwow/dependabot-lein-runner@main
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
@@ -52,11 +52,11 @@ jobs:
       fail-fast: false
       matrix:
         projects:
-          - repository: CGA1123/dependabot-lein-runner
+          - repository: carwow/dependabot-lein-runner
             directory: '/dummy'
 
     steps:
-      - uses: CGA1123/dependabot-lein-runner@main
+      - uses: carwow/dependabot-lein-runner@main
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           repository: ${{ matrix.projects.repository }}
@@ -64,6 +64,6 @@ jobs:
 ```
 
 
-[`ghcr.io/cga1123/dependabot-lein-runner`]: https://github.com/users/CGA1123/packages/container/package/dependabot-lein-runner
+[`ghcr.io/carwow/dependabot-lein-runner`]: https://github.com/users/carwow/packages/container/package/dependabot-lein-runner
 [`dependabot/dependabot-core`]: https://github.com/dependabot/dependabot-core
-[fork]: https://github.com/CGA1123/dependabot-core/tree/leiningen
+[fork]: https://github.com/carwow/dependabot-core/tree/leiningen
