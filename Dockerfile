@@ -75,4 +75,6 @@ RUN bundle install --path vendor
 
 COPY ./entrypoint.sh /entrypoint.sh
 
+LABEL org.opencontainers.image.source=https://github.com/carwow/dependabot-lein-runner
+
 ENTRYPOINT ["/entrypoint.sh"]
